@@ -1,8 +1,224 @@
-<HTML>
-  <HEAD>
-    <TITLE>My first page</TITLE>
-  </HEAD>
-  <BODY>
-    这是我的第一个网站
-  </BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多彩个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f0f7ff;
+            color: #222;
+        }
+        /* 渐变导航栏 */
+        nav {
+            background: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70);
+            padding: 1.2rem 8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 2.2rem;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover {
+            color: #fff3b0;
+            text-shadow: 0 0 6px rgba(255,255,255,0.6);
+        }
+        /* 首页横幅区域 */
+        .banner {
+            width: 80%;
+            margin: 70px auto;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+        .banner-text h1 {
+            font-size: 40px;
+            margin-bottom: 22px;
+            color: #3b2e5a;
+        }
+        .banner-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 28px;
+        }
+        .btn-group .btn {
+            padding: 13px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size:16px;
+            cursor: pointer;
+            margin-right:16px;
+            transition: 0.3s;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #4158D0, #C850C0);
+            color:white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px #c850c070;
+        }
+        .btn-secondary {
+            background-color: #fff;
+            color:#C850C0;
+            border:2px solid #C850C0;
+        }
+        .btn-secondary:hover {
+            background-color: #fff0f9;
+            transform: translateY(-3px);
+        }
+        .banner-img {
+            width: 420px;
+            height: 320px;
+            background: linear-gradient(135deg,#84fab0,#8fd3f4);
+            border-radius:12px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#2c6e80;
+            font-size:18px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+        /* 作品卡片区域 */
+        .work-section {
+            width:80%;
+            margin: 90px auto;
+        }
+        .section-title {
+            text-align:center;
+            font-size:30px;
+            color:#3b2e5a;
+            margin-bottom:40px;
+        }
+        .card-wrap {
+            display:flex;
+            gap:28px;
+        }
+        .card {
+            flex:1;
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow:0 8px 20px rgba(0,0,0,0.12);
+        }
+        .card-img {
+            height:160px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:16px;
+        }
+        .card1 .card-img {
+            background:linear-gradient(45deg,#ff9a9e,#fad0c4);
+        }
+        .card2 .card-img {
+            background:linear-gradient(45deg,#a18cd1,#fbc2eb);
+        }
+        .card3 .card-img {
+            background:linear-gradient(45deg,#ffecd2,#fcb69f);
+        }
+        .card-body {
+            padding:20px;
+        }
+        .card-body h3 {
+            margin-bottom:10px;
+            color:#333;
+        }
+        .card-body p {
+            color:#666;
+            line-height:1.6;
+        }
+        /* 页脚 */
+        footer {
+            background: #3b2e5a;
+            color:#fff;
+            text-align:center;
+            padding:30px;
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <nav>
+        <div class="logo">我的多彩主页</div>
+        <div class="nav-links">
+            <a href="#">首页</a>
+            <a href="#">关于我</a>
+            <a href="#">作品展示</a>
+            <a href="#">留言联系</a>
+        </div>
+    </nav>
+
+    <!--横幅介绍区-->
+    <div class="banner">
+        <div class="banner-text">
+            <h1>你好，欢迎来到我的个人主页✨</h1>
+            <p>这里展示我的学习项目、设计作品与日常记录。页面采用多组渐变色彩搭配，加入悬浮动效，分为首页介绍、作品卡片两大板块。所有图片都是渐变色块占位，无需额外图片素材，下载代码就能直接打开预览。</p>
+            <div class="btn-group">
+                <button class="btn btn-primary">查看作品</button>
+                <button class="btn btn-secondary">了解更多</button>
+            </div>
+        </div>
+        <div class="banner-img">首页大图占位</div>
+    </div>
+
+    <!--作品卡片区域-->
+    <div class="work-section">
+        <h2 class="section-title">我的作品合集</h2>
+        <div class="card-wrap">
+            <div class="card card1">
+                <div class="card-img">项目一</div>
+                <div class="card-body">
+                    <h3>网页设计项目</h3>
+                    <p>静态网页开发练习，掌握HTML与CSS布局、渐变与悬浮效果。</p>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="card-img">项目二</div>
+                <div class="card-body">
+                    <h3>UI界面设计</h3>
+                    <p>学习界面配色、卡片设计，练习页面层次与视觉排版。</p>
+                </div>
+            </div>
+            <div class="card card3">
+                <div class="card-img">项目三</div>
+                <div class="card-body">
+                    <h3>图文展示页面</h3>
+                    <p>多模块页面搭建，熟悉页面分块、响应式基础布局思路。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚-->
+    <footer>
+        © 2026 个人主页 | 全部代码由HTML+CSS编写
+    </footer>
+</body>
+</html>
